@@ -23,15 +23,22 @@ header{
 	border: none;
 	padding: 5px 10px;
 	color: #fff;
-}
+}/*
 #agregar:active,
 #agregar:focus {
 	color:#fff;
 	background-color:red;
-}
-#cont {
+}*/
+#contenedorTareas p{
 	display: block;
-	width: 300px;
+	width: 200px;
 	background-color: #fff;
-	padding: 20px 20px;
+	padding: 5px 5px;
+	color: rgb(64, 64, 64);
+}
+
+#contenedorTareas .fa {
+	float: right;
+	color: rgb(0, 121, 191);
+
 }
