@@ -10,7 +10,7 @@ function agregarTareas(){
 
 	//creando elementos
 	var nuevoDiv = document.createElement("div");
-	var nuevoInput = document.createElement("input");
+	var nuevoInput = document.createElement("textarea");
 	var nuevoBoton = document.createElement("button");
 
 	var textoBoton = document.createTextNode("Guardar");
@@ -27,12 +27,14 @@ function agregarTareas(){
 	nuevoDiv.appendChild(nuevoInput);
 	nuevoDiv.appendChild(nuevoBoton);
 
+	//Creando boton x
+	var eliminar = document.createElement("span");
+	eliminar.classList.add("fa", "fa-times");	//icono de basurero
 
 	//Asignandole el titulo a las tareas
 	var guardar = document.getElementById("guardar");
 
 	guardar.addEventListener("click", function(){
-
 		var tareas = document.getElementById("tareas").value;
 		document.getElementById("tareas").value = "";	// Limpiando textarea
 
@@ -42,25 +44,29 @@ function agregarTareas(){
 			}
 
 			else{
-			/*document.getElementById("agregar").textContent = tareas; //Cambiandole el texto del a con el titulo que se asigno*/
+
 			var	nuevoParrafo = document.createElement("p");
 			var nuevoParrafoTexto = document.createTextNode(tareas);
 
+			nuevoParrafo.setAttribute("class", "textos");
 			nuevoParrafo.appendChild(nuevoParrafoTexto);
+			
+			/* //SE SUPONE QUE TOMARIA EL PRIMER ELEMENTO DEL ARREGLO Y LO CAMBIA POR EL TEXTO DE LA ETIQUETA A
+			var titulo = document.getElementsByClassName("textos")[0].value;
+			var valorTitulo.push(titulo);
+
+			document.getElementById("agregar").textContent = titulo;
+			*/
 			contenedor.appendChild(nuevoParrafo);
-
-			//Creando boton x
-			var eliminar = document.createElement("span");
-			eliminar.classList.add("fa", "fa-times");	//icono de basurero
 			nuevoParrafo.appendChild(eliminar);
-			}
 
+			}
 			eliminar.addEventListener("click", function(){
 			contenedor.removeChild(nuevoParrafo);
+
 			})
 
 		})
-
 };
 
 /* //Intentando ocultar cajita

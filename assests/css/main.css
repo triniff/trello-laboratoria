@@ -12,26 +12,46 @@ header{
 }
 #agregar {
 	padding: 10px 100px 10px 7px;
-	margin: 30px 50px;
+	margin: 30px 50px 0px 50px;
+	width: 250px;
+	box-sizing: border-box;
 	background-color: #026AA7;
 	display: inline-block;
 	text-decoration: none;
 	color: #fff;
 }
-#caja button {
-	background-color: green;
-	border: none;
-	padding: 5px 10px;
-	color: #fff;
-}/*
+/*
 #agregar:active,
 #agregar:focus {
 	color:#fff;
 	background-color:red;
 }*/
+#cont {
+	width: 250px;
+	height: 100px;
+	margin: 0 50px;
+	padding: 5px 10px;
+	box-sizing: border-box;
+	background-color: #C9C9C9;
+}
+#cont textarea {
+	float: left;
+	width: 100%;
+	margin: 0 auto;
+}
+#cont button {
+	float: left;
+	background-color: green;
+	margin-top: 10px;
+	border: none;
+	padding: 5px 10px;
+	color: #fff;
+}
 #contenedorTareas p{
 	display: block;
-	width: 200px;
+	margin: 0 50px;
+	width: 250px;
+	box-sizing: border-box;
 	background-color: #fff;
 	padding: 5px 5px;
 	color: rgb(64, 64, 64);
