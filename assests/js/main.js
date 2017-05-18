@@ -27,14 +27,12 @@ function agregarTareas(){
 	nuevoDiv.appendChild(nuevoInput);
 	nuevoDiv.appendChild(nuevoBoton);
 
-	//Creando boton x
-	var eliminar = document.createElement("span");
-	eliminar.classList.add("fa", "fa-times");	//icono de basurero
 
 	//Asignandole el titulo a las tareas
 	var guardar = document.getElementById("guardar");
 
 	guardar.addEventListener("click", function(){
+
 		var tareas = document.getElementById("tareas").value;
 		document.getElementById("tareas").value = "";	// Limpiando textarea
 
@@ -58,15 +56,19 @@ function agregarTareas(){
 			document.getElementById("agregar").textContent = titulo;
 			*/
 			contenedor.appendChild(nuevoParrafo);
-			nuevoParrafo.appendChild(eliminar);
 
+			//Creando boton x
+			var eliminar = document.createElement("span");
+			eliminar.classList.add("fa", "fa-times");	//icono de basurero
+			nuevoParrafo.appendChild(eliminar);
 			}
+
 			eliminar.addEventListener("click", function(){
 			contenedor.removeChild(nuevoParrafo);
-
 			})
 
 		})
+
 };
 
 /* //Intentando ocultar cajita
